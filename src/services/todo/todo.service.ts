@@ -12,6 +12,6 @@ export class ToDoService {
     return this.todoDao.getAllByUser(userId);
   }
   getById(userId: number) {
-    throw new Error("Method not implemented.");
+    this.todoDao.getById(userId);
   }
 }
