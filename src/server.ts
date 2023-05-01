@@ -3,7 +3,9 @@ import { initApp } from "./app";
 import { initAdapters } from "./init.adapter";
 
 const adapters = initAdapters();
+
 const app = initApp(adapters);
+
 app.listen(8090, () => {
   console.log(`Server started on port 8090`);
 });

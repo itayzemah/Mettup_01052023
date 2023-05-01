@@ -1,3 +1,5 @@
+import { ToDoDao } from "../dao/todo";
+import { ToDo } from "../dao/todo/todo.type";
 import { User, UserDao } from "../dao/user";
 
 export class FakeUserDao implements UserDao {
@@ -13,5 +15,20 @@ export class FakeUserDao implements UserDao {
     newUser.id ??= Math.max(1, ...this.users.map((u) => u.id || 1));
     this.users.push(newUser);
     return newUser;
+  }
+}
+
+export class FakeToDoDao implements ToDoDao {
+  getAllByUser(userId: number): Promise<ToDo[]> {
+    throw new Error("Method not implemented.");
+  }
+  getById(id: number): Promise<ToDo | null> {
+    throw new Error("Method not implemented.");
+  }
+  create(todo: ToDo): Promise<ToDo> {
+    throw new Error("Method not implemented.");
+  }
+  bind(todoId: number, userId: number): Promise<ToDo> {
+    throw new Error("Method not implemented.");
   }
 }

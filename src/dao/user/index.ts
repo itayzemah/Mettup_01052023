@@ -7,4 +7,4 @@ export interface UserDao {
 }
 
 export * from "./user.type";
-export { KnexUserDao } from "./user.dao";
+export { KnexUserDao } from "./knex.user.dao";
